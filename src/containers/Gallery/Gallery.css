@@ -1,0 +1,124 @@
+.app__gallery {
+	display: flex;
+	align-items: center;
+	background: var(--color-black);
+	padding: 4rem 25px 4rem 6rem;
+	gap: 4rem;
+	justify-content: flex-start;
+}
+
+.app__gallery-content {
+	max-width: 490px;
+	min-width: 380px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.app__gallery-content p {
+	color: var(--color-grey);
+	font-family: var(--font-alt);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.64px;
+	margin-block: 1.5rem;
+}
+.app__gallery-images {
+	flex: 1;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+
+.app__gallery-images_container {
+	display: flex;
+	gap: 2rem;
+	overflow-x: scroll;
+	width: max-content;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.app__gallery-images_container::-webkit-scrollbar {
+	display: none;
+}
+
+.app__gallery-images_card {
+	position: relative;
+	min-width: 301px;
+	height: 447px;
+}
+
+.app__gallery-images_card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s ease;
+}
+
+.gallery__image-icon {
+	position: absolute;
+	opacity: 0.5;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.app__gallery-images_card:hover .gallery__image-icon {
+	opacity: 1;
+}
+.app__gallery-images_card:hover img {
+	opacity: 0.35;
+}
+
+.app__gallery-images_arrows {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--color-golden);
+	bottom: 0.7rem;
+	padding: 0 0.7rem;
+}
+
+.app__gallery-images_arrows .gallery__arrow-icon {
+	font-size: 2rem;
+	border: 2px solid var(--color-golden);
+	border-radius: 5%;
+	opacity: 100%;
+	background-color: var(--color-black);
+}
+
+.app__gallery-images_arrows .gallery__arrow-icon:hover {
+	color: var(--color-black);
+	background: var(--color-golden);
+	border-color: var(--color-black);
+}
+
+@media screen and (max-width: 850px) {
+	.app__gallery {
+		flex-direction: column;
+		padding: 4rem;
+	}
+
+	.app__gallery-images {
+		width: 100%;
+	}
+
+	.app__gallery-content {
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.app__gallery {
+		padding: 4rem 2rem;
+	}
+  .app__gallery-images {
+    border: 2px solid var(--color-golden);
+  }
+}

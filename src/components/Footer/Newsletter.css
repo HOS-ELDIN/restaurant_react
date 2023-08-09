@@ -1,0 +1,83 @@
+.app__newsletter {
+	/* border: 1px solid rgba(220, 202, 135, 0.2); */
+	border: 1px solid var(--color-golden);
+	background: #0c0c0c;
+
+	/* Dark Card shadow */
+	box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
+	display: flex;
+	padding: 4rem 10rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	margin: 0 auto -10.5rem;
+	text-align: center;
+	z-index: 5;
+	position: relative;
+}
+.app__newsletter h1 + p {
+	margin: 1.5rem 0 0;
+}
+
+.app__newsletter form {
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+}
+
+.app__newsletter form input {
+	flex: 1;
+	padding: 1rem;
+	height: 60px;
+	color: var(--color-grey);
+	font-variant-numeric: lining-nums tabular-nums;
+	background-color: var(--color-black);
+	border: 1px solid var(--color-golden);
+	outline: none;
+
+	/* H6 16px Cormorant Upright */
+	font-family: var(--font-base);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 28px;
+	letter-spacing: 0.64px;
+	text-transform: capitalize;
+}
+
+@media screen and (max-width: 1150px) {
+	.app__newsletter {
+		padding: 4rem 6rem;
+	}
+
+	.app__newsletter h1 {
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 850px) {
+	.app__newsletter {
+		padding: 4rem;
+		margin-bottom: -13rem;
+	}
+
+	.app__newsletter h1 {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 650px) {
+	.app__newsletter {
+		padding: 4rem 2rem;
+		width: 100%;
+	}
+	.app__newsletter form {
+		flex-direction: column;
+		width: 100%;
+	}
+	.app__newsletter form input {
+		width: 100%;
+	}
+}
