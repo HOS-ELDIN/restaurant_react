@@ -1,4 +1,3 @@
-// ! change menu and video to islamic version
 
 import {
 	Header,
